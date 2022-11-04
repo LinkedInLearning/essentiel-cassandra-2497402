@@ -1,0 +1,1 @@
+docker run --name cassandra04 -d -p 9045:9042 -v d:\cassandra_data04:/var/lib/cassandra cassandra

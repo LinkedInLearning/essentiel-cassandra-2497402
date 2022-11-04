@@ -1,0 +1,67 @@
+version: '3.8'
+networks:
+  cassandra:
+services:
+  cassandra01:
+    image: cassandra:4.1
+    container_name: cassandra01
+    hostname: cassandra01
+    # mem_limit: 2g
+    healthcheck:
+      test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+    networks:
+      - cassandra
+    ports:
+      - "9042:9042"
+    volumes:
+      - d:\cassandra_data01:/var/lib/cassandra
+      # - ./etc/cassandra01:/etc/cassandra
+    environment: &environment    # Déclaration des variables d'environnement
+        CASSANDRA_SEEDS: "cassandra01,cassandra02"
+        CASSANDRA_CLUSTER_NAME: Gallifrey
+
+  cassandra02:
+      image: cassandra:4.1
+      container_name: cassandra02
+      hostname: cassandra02
+      # mem_limit: 2g
+      healthcheck:
+        test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+      networks:
+        - cassandra
+      ports:
+        - "9043:9042"
+      volumes:
+        - d:\cassandra_data02:/var/lib/cassandra
+        # - ./etc/cassandra02:/etc/cassandra
+      environment: *environment    # on pointe sur les mêmes variables d'environnement
+      depends_on:
+        cassandra01:
+          condition: service_healthy
+
+  cassandra03:
+      image: cassandra:4.1
+      container_name: cassandra03
+      hostname: cassandra03
+      # mem_limit: 2g
+      healthcheck:
+        test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+      networks:
+        - cassandra
+      ports:
+        - "9044:9042"
+      volumes:
+        - d:\cassandra_data03:/var/lib/cassandra
+      environment: *environment
+      depends_on:
+        cassandra02:
+          condition: service_healthy
