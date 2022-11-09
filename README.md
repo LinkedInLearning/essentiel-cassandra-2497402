@@ -1,8 +1,8 @@
-# L'Essentiel de Cassandra
+# L'essentiel de Cassandra
 
-Ce dossier Repository est lié au cours `L'Essentiel de Cassandra`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
+Ce dossier Repository est lié au cours `L'essentiel de Cassandra`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
 
-![L'Essentiel de Cassandra][lil-thumbnail-url][Copy&Past Image from LiL-Buddy] 
+![L'essentiel de Cassandra][lil-thumbnail-url][Copy&Past Image from LiL-Buddy] 
 
 DESCRIPTION DE LA FORMATION
 
