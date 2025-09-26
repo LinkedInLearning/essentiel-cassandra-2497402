@@ -6,6 +6,8 @@ Ce dossier Repository est lié au cours `L'essentiel de Cassandra`. Le cours ent
 
 Apache Cassandra est le moteur de bases de données NoSQL le utilisé dans le monde par de nombreuses entreprises. Si vous êtes développeur ou ingénieur logiciel, découvrez ce cours pour gérer les très grands volumes de données d'entreprise à l'aide de Cassandra. Rudi Bruchez, expert indépendant en bases de données, vous guide dans l'utilisation du moteur distribué d'Apache. Ensemble, vous allez voir comment configurer et administrer Cassandra afin de maîtriser le système de gestion et son environnement.
 
+La meilleure façon d'apprendre un langage est de l'utiliser dans la pratique. C'est pourquoi ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. 
+
 ## Instructions
 
 Ce dossier Repository a des dossiers pour chacun des chapitres du cours où du code source a été utilisé.
